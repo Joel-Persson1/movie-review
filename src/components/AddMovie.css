@@ -1,0 +1,147 @@
+.form-container {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  background-color: #282b30;
+  border-radius: 10px 1px 0px 10px;
+}
+
+.form-container h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  align-self: center;
+}
+
+.form-container label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.form-image-container {
+  display: flex;
+}
+
+img {
+  width: 35rem;
+  height: 100%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  background-color: #36393e;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+.input-container textarea {
+  height: 10rem;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.form-container button {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  border: none;
+
+  font-size: 1rem;
+
+  color: whitesmoke;
+  background-color: rgb(126, 22, 22);
+  border-radius: 0.5rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #7e1616;
+  border-radius: 1rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: #1e2124;
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 0.5rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #1e2124;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #7e1616;
+  border-radius: 1rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #1e2124;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 0.5rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  outline: 3px solid #1e2124;
+  outline-offset: 0.125rem;
+}

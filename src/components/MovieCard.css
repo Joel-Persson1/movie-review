@@ -1,0 +1,31 @@
+.moviecard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #64686d;
+}
+
+.moviecard h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.title-rating-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.moviecard-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+.moviecard-genre {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
