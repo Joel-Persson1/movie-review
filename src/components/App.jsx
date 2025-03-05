@@ -1,16 +1,16 @@
 import "./App.css";
 import { AddMovie } from "./AddMovie";
 import { MovieList } from "./MovieList";
-import { MovieCardsContext } from "../Context/MovieContext";
+import { MovieProvider } from "../Context/MovieContext";
 
 function App() {
   return (
-    <MovieCardsContext>
+    <MovieProvider>
       <main className="container-main">
         <AddMovie />
         <MovieList />
       </main>
-    </MovieCardsContext>
+    </MovieProvider>
   );
 }
 

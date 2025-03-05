@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useContext } from "react";
+
+import { useMovieContext } from "../Context/MovieContext";
 import { MovieCard } from "./MovieCard";
 
 export function MovieList() {
-  const { movieList, removeMovieCard } = useContext();
+  const { movieList, removeMovieCard } = useMovieContext();
   return (
     <section className="grid" onClick={removeMovieCard}>
       {movieList.map((movie) => (
