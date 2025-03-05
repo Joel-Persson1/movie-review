@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 
 import myImage from "../assets/myImage.jpg";
+import { useMovieContext } from "../Context/MovieContext";
 
-export function AddMovie({ values, onChange, clearForm, handleOnSubmit }) {
+export function AddMovie() {
+  const { values, handleOnChange, handleOnSubmit, clearForm } =
+    useMovieContext();
   return (
     <section className="header">
       <section className="form-image-container">
@@ -14,7 +17,7 @@ export function AddMovie({ values, onChange, clearForm, handleOnSubmit }) {
               type="text"
               name="title"
               value={values.title}
-              onChange={onChange}
+              onChange={handleOnChange}
             />
           </div>
           <div className="input-container">
@@ -26,12 +29,12 @@ export function AddMovie({ values, onChange, clearForm, handleOnSubmit }) {
               min={1}
               max={5}
               value={values.rating}
-              onChange={onChange}
+              onChange={handleOnChange}
             />
           </div>
           <div className="input-container">
             <label>Genre 🎭</label>
-            <select name="genre" value={values.genre} onChange={onChange}>
+            <select name="genre" value={values.genre} onChange={handleOnChange}>
               <option value="Drama">Drama</option>
               <option value="Action">Action</option>
               <option value="Comedi">Comedi</option>
@@ -44,7 +47,7 @@ export function AddMovie({ values, onChange, clearForm, handleOnSubmit }) {
             <textarea
               name="description"
               value={values.description}
-              onChange={onChange}
+              onChange={handleOnChange}
             ></textarea>
           </div>
           <div className="btn-container">
